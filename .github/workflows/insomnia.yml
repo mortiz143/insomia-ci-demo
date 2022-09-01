@@ -21,7 +21,7 @@ jobs:
         with:
           inso-version: 2.4.0
       - name: Lint
-        run: inso lint spec "Pet Store Insomia" --ci
+        run: inso lint spec spc_0960f423b04645da9205582895e4724a --ci
       - name: Run test suites
         run: inso run test "Sample Test Suite" --env "OpenAPI env" --ci
       - name: Generate declarative config
