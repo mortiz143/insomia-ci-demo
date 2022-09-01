@@ -25,4 +25,4 @@ jobs:
       - name: Run test suites
         run: inso run test "Sample Test Suite" --env "OpenAPI env" --ci
       - name: Generate declarative config
-        run: inso generate config "Pet Store Insomia" --type declarative --ci
+        run: inso generate config spc_0960f423b04645da9205582895e4724a --type declarative --ci
