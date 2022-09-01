@@ -1,0 +1,9 @@
+
+
+steps:
+  - name: ':insomnia: run test and generate config'
+    command:
+    - docker run -it --rm -v $(pwd):/var/temp kong/inso:latest lint spec "Swagger Petstore 1.0.2" --ci
+    - docker run -it --rm -v $(pwd):/var/temp kong/inso:latest run test "New Suite" --env "OpenAPI env"  -w /var/temp --ci
+    - docker run -it --rm -v $(pwd):/var/temp kong/inso:latest generate config spc_02c2aac2a8e04da28500240dcba63854 --type declarative --output kong.yaml  -w /var/temp --ci
+    
