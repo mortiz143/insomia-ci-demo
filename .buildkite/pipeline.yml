@@ -3,7 +3,7 @@
 steps:
   - name: ':insomnia: run lint'
     command:
-    - docker run -it --rm -v $(pwd):/var/temp kong/inso:latest lint spec "Swagger Petstore 1.0.2" --ci
+    - docker run -it --rm -v $(pwd):/var/temp kong/inso:latest lint spec "Swagger Petstore 1.0.2" -w /var/temp --ci
 
   - name: ':insomnia: run test'
     command:
