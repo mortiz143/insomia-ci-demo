@@ -21,8 +21,8 @@ jobs:
         with:
           inso-version: 2.4.0
       - name: Lint
-        run: inso lint spec spc_0960f423b04645da9205582895e4724a --ci
+        run: inso lint spec spc_02c2aac2a8e04da28500240dcba63854 --ci
       - name: Run test suites
         run: inso run test "Sample Test Suite" --env "OpenAPI env" --ci
       - name: Generate declarative config
-        run: inso generate config spc_0960f423b04645da9205582895e4724a --type declarative --ci
+        run: inso generate config spc_02c2aac2a8e04da28500240dcba63854 --type declarative --ci
